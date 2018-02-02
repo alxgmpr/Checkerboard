@@ -19,7 +19,7 @@ public class Checkerboard extends Application {
     
     @Override
     public void start(Stage stage) throws Exception {
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("FXMLDocument.fxml"));
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("CheckerboardFXML.fxml"));
         Parent root = loader.load();
         Startable controller = loader.getController();
         
@@ -28,6 +28,7 @@ public class Checkerboard extends Application {
         
         stage.setScene(scene);
         stage.show();
+        controller.start(stage);
     }
 
     /**

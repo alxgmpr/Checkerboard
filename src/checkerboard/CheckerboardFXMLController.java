@@ -30,4 +30,34 @@ public class CheckerboardFXMLController implements Initializable, Startable {
         
     }
     
+    @FXML
+    public void handleGrid16(ActionEvent event) {
+        
+    }
+    
+    @FXML
+    public void handleGrid10(ActionEvent event) {
+        
+    }
+    
+    @FXML
+    public void handleGrid8(ActionEvent event) {
+        
+    }
+    
+    @FXML
+    public void handleGrid3(ActionEvent event) {
+        
+    }
+    
+    @FXML
+    public void handleColorDefault(ActionEvent event) {
+        
+    }
+    
+    @FXML
+    public void handleColorBlue(ActionEvent event) {
+        
+    }
+    
 }

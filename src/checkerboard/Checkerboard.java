@@ -47,11 +47,10 @@ public class Checkerboard {
     
     /* Getter functions */
     public AnchorPane getBoard() {
-        if (this.anchorPane == null) {
-            this.anchorPane = this.build();
-            return this.anchorPane;
+        if (this.anchorPane != null) {
+            return this.build();
         } else {
-            return this.anchorPane;
+            return null;
         }
     }
     

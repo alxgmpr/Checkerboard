@@ -6,7 +6,6 @@
 package checkerboard;
 
 import java.net.URL;
-import java.util.HashSet;
 import java.util.ResourceBundle;
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
@@ -42,14 +41,12 @@ public class CheckerboardFXMLController implements Initializable, Startable {
         this.stage = stage;
         this.checkerboard = new Checkerboard(numRows, numCols, anchorPane.getWidth(), anchorPane.getHeight());
         this.checkerboard.setAnchorPane(anchorPane);
-        this.anchorPane = this.checkerboard.build();
-        
-        
+        this.anchorPane = this.checkerboard.getBoard();
         
         ChangeListener<Number> lambdaChangeListener = (ObservableValue<? extends Number> observable, Number oldValue, final Number newValue) -> {
             this.checkerboard.setBoardHeight(anchorPane.getHeight());
             this.checkerboard.setBoardWidth(anchorPane.getWidth());
-            this.anchorPane = this.checkerboard.build();
+            this.anchorPane = this.checkerboard.getBoard();
         };
         
         this.stage.widthProperty().addListener(lambdaChangeListener);
@@ -60,21 +57,21 @@ public class CheckerboardFXMLController implements Initializable, Startable {
     public void handleGrid16(ActionEvent event) {
         this.checkerboard.setNumCols(16);
         this.checkerboard.setNumRows(16);
-        this.anchorPane = checkerboard.build();
+        this.anchorPane = checkerboard.getBoard();
     }
     
     @FXML
     public void handleGrid10(ActionEvent event) {
         this.checkerboard.setNumCols(10);
         this.checkerboard.setNumRows(10);
-        this.anchorPane = checkerboard.build();
+        this.anchorPane = checkerboard.getBoard();
     }
     
     @FXML
     public void handleGrid8(ActionEvent event) {
         this.checkerboard.setNumCols(8);
         this.checkerboard.setNumRows(8);
-        this.anchorPane = checkerboard.build();
+        this.anchorPane = checkerboard.getBoard();
     }
     
     @FXML
@@ -88,14 +85,14 @@ public class CheckerboardFXMLController implements Initializable, Startable {
     public void handleColorDefault(ActionEvent event) {
         this.checkerboard.setLightColor(Color.RED);
         this.checkerboard.setDarkColor(Color.BLACK);
-        this.anchorPane = checkerboard.build();
+        this.anchorPane = checkerboard.getBoard();
     }
     
     @FXML
     public void handleColorBlue(ActionEvent event) {
         this.checkerboard.setLightColor(Color.SKYBLUE);
         this.checkerboard.setDarkColor(Color.DARKBLUE);
-        this.anchorPane = checkerboard.build();
+        this.anchorPane = checkerboard.getBoard();
     }
     
 }

@@ -20,11 +20,12 @@
           </Menu>
           <Menu mnemonicParsing="false" text="Colors">
             <items>
-              <MenuItem mnemonicParsing="false" onAction="#handleColorBlue" text="Default" />
+              <MenuItem mnemonicParsing="false" onAction="#handleColorDefault" text="Default" />
                   <MenuItem mnemonicParsing="false" onAction="#handleColorBlue" text="Blue" />
             </items>
           </Menu>
         </menus>
       </MenuBar>
+      <AnchorPane fx:id="anchorPane" prefHeight="1000.0" prefWidth="1000.0" />
    </children>
 </VBox>

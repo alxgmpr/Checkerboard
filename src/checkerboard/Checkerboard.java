@@ -133,8 +133,7 @@ public class Checkerboard {
                 
                 Rectangle rectangle;
                 
-                if ((i*j) % 2 == 0) {
-                    System.out.println((i*j) % 2);
+                if ( ((i+j) % 2) == 0) {
                     rectangle = new Rectangle(getRectangleWidth(), getRectangleHeight(), this.lightColor);
                 } else {
                     rectangle = new Rectangle(getRectangleWidth(), getRectangleHeight(), this.darkColor);
